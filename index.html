@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mi Página Web</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -15,15 +17,15 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
+            background: #f5f3ef;
+            color: #222;
         }
 
-        /* Barra de navegación */
+        /* BARRA DE NAVEGACIÓN */
         .navbar {
-            background: #222;
-            padding: 15px 0;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+            padding: 18px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
         }
 
         .container {
@@ -36,73 +38,109 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 10px;
+            align-items: center;
+            gap: 15px;
         }
 
         .navbar a {
             text-decoration: none;
             color: white;
-            padding: 12px 20px;
-            border-radius: 6px;
+            font-size: 16px;
+            padding: 12px 22px;
+            border-radius: 25px;
             transition: 0.3s;
         }
 
         .navbar a:hover {
-            background: #555;
+            background: #c9a227;
+            color: #111;
         }
 
         .navbar a.active {
-            background: #007bff;
+            background: #c9a227;
+            color: #111;
+            font-weight: bold;
         }
 
-        /* Contenido principal */
+        /* CONTENIDO PRINCIPAL */
         .contenido {
             width: 90%;
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 60px auto;
             text-align: center;
         }
 
         .contenido h1 {
-            color: #222;
-            margin-bottom: 10px;
+            font-size: 38px;
+            color: #162c3a;
+            margin-bottom: 15px;
+        }
+
+        .contenido h1 span {
+            color: #b08d1a;
         }
 
         .contenido p {
+            font-size: 17px;
             color: #666;
-            margin-bottom: 30px;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            line-height: 1.6;
         }
 
-        /* Video */
+        /* TARJETA DEL VIDEO */
         .video-container {
             background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            max-width: 650px;
+            max-width: 700px;
             margin: auto;
+            padding: 15px;
+            border-radius: 18px;
+            border-top: 5px solid #c9a227;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
         iframe {
             width: 100%;
-            height: 350px;
-            border-radius: 8px;
+            height: 380px;
+            border-radius: 12px;
         }
 
-        /* Pie de página */
+        /* BOTÓN */
+        .boton {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 28px;
+            background: #162c3a;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #c9a227;
+            color: #111;
+        }
+
+        /* PIE DE PÁGINA */
         footer {
-            margin-top: 50px;
-            background: #222;
+            margin-top: 70px;
+            background: #0f2027;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
         }
 
-        /* Diseño para celulares */
+        footer span {
+            color: #c9a227;
+        }
+
+        /* CELULARES */
         @media (max-width: 600px) {
+
             .navbar ul {
                 flex-direction: column;
-                align-items: center;
+                gap: 8px;
             }
 
             .navbar a {
@@ -111,19 +149,25 @@
                 text-align: center;
             }
 
+            .contenido h1 {
+                font-size: 28px;
+            }
+
             iframe {
                 height: 220px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- Barra de navegación -->
+    <!-- MENÚ -->
     <nav class="navbar">
         <div class="container">
             <ul>
+
                 <li>
                     <a class="active" href="index.html">Inicio</a>
                 </li>
@@ -135,22 +179,26 @@
                 <li>
                     <a href="tarjetas.html">Tarjetas</a>
                 </li>
+
             </ul>
         </div>
     </nav>
 
-    <!-- Contenido -->
+
+    <!-- CONTENIDO -->
     <main class="contenido">
 
-        <h1>Bienvenido a mi página web</h1>
+        <h1>Bienvenido a <span>Mi Página Web</span></h1>
 
         <p>
-            En esta página podemos encontrar diferentes ejemplos
-            de diseño y contenido utilizando HTML y CSS.
+            Explora nuestro contenido y conoce los diferentes
+            ejemplos de diseño realizados utilizando HTML y CSS.
         </p>
 
-        <!-- Video -->
+
+        <!-- VIDEO -->
         <div class="video-container">
+
             <iframe 
                 src="https://www.youtube.com/embed/6C_s56iscpQ?si=b0hltwtcRGwSWBek"
                 title="Video de YouTube"
@@ -159,13 +207,22 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
             </iframe>
+
         </div>
+
+
+        <a href="columnas.html" class="boton">
+            Ver contenido
+        </a>
 
     </main>
 
-    <!-- Pie de página -->
+
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <p>© 2026 - Mi Página Web | Proyecto HTML</p>
+        <p>
+            © 2026 - <span>Mi Página Web</span> | Proyecto HTML
+        </p>
     </footer>
 
 </body>
